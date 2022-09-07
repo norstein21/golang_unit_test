@@ -1,0 +1,25 @@
+Testing Package
+Biasanya di bahasa pemograman lain kita hutuh library atau framework khusus untuk unit test
+Namun Go-Lang sudah menyediakan sebuah package khusus bernama testing sehingga mempermudah dalam implementasi unit test
+Selain untuk menjalankan unit test, Go-Lang sudah menyedikan perintahnya
+Hal ini  membuat implentasi unit testing di golang sangat mudah dibanding dengan bahasa pemograman yang lain
+https://golang.org/pkg/testing
+
+testing.T, struct ini digunakan untuk unit test
+testing.M, struct ini untuk mengatur life cycle Testing
+testing.B, digunakan untuk melakukan benchmarking(mengukur kecepatan kode program)
+
+commandnya:
+go test
+go test -v(lebih ekspisit function apa saja yang ditest)
+go test -v -run=(nama function dalam file test) (lebih detail lagi file mana saja yang ingin ditest)
+
+wajib di run di folder dimana file test berada
+namun ada solusinya jika ingin menjalankan semua unit test
+dari top folder modulenya menggunakan perintah: go test ./...
+
+
+**MENGGAGALKAN UNIT TEST**
+Menggagalkan unit test menggunakan panic bukanlah hal yang bagus
+Go-Lang sendiri sudah menyiadakan cara untuk menggagalkan unit test menggunakan testing.t
+Terdapat function Fail(), FailNow(), Error() dan Fatal() jika kita ingin menggagalkan unit test

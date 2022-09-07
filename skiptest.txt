@@ -1,0 +1,9 @@
+**SKIP TEST**
+Kadang dalam keadaan tertentu, kita ingin membatalkan ekseksu unit test
+Di Go-Lang juga sudah menyiapkan fungsi ini jika kita butuh
+Untuk membatalkan unit test kita bisa menggunakan function skip()
+
+Contohnya disaat test yang kita buat ini tidak bisa dijalankan di mac OS
+if runtime.GOOS == "darwin"{
+    t.Skip("Tidak bisa dijalankan di MAC OS")
+}

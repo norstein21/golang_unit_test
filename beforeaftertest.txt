@@ -1,0 +1,11 @@
+** BEFORE AFTER TEST **
+Biasanya dalam unit test, kadang kita ingin melakukan sesuatu sebelum dan setelah sebuah unit test dieksekusi
+Misalnya jika ingin membuat koneksi database sebelum melakukan unit test
+Ketimbang membuatnya satu per satu pada function(perulangan) lebih baik menggunakan fitur yang bernama testing.Menangkap
+Fitur ini bernama Main, dimana digunakan untuk mengatur eksekusi unit test, namun hal ini juga bisa kita gunakan untuk melakukan before dan after di unit test
+
+**testing.M**
+Untuk mengatur eksekusi unit test, kita cukup membuat sebuah function bernama TestMain dengan parameter testing.M
+Jika terdapat function TestMain, GOLANG akan secara otomatis mengeksekusi function ini tiap kali akan menjalankan unit test di sebuah package
+Dengan ini kita bisa mengatur Before dan After unit test sesuai dengan yang kita manual
+Function TestMain itu dieksekusi hanya sekali per Go-Lang Package, bukan per tiap function unit test

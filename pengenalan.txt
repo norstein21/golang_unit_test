@@ -1,0 +1,16 @@
+Software testing adalah satu disiplin ilmu dalam software engineering
+Tujuan utama dari software testing adalah memastikan kualitas kode dan aplikasi kita baik(minim bug dan minum error)
+Ilmu untuk software testing sendiri sangatlah luas,  pada materi ini kita hanya akan fokus ke unit testing
+
+Dalam test piramid ada 3,
+1. UI test(end to end test), biayanya besar dan waktu nya lama, karena testnya dilakukan secara komplit(lebihr real) dari frontend hingga database bahkan sistem lain yang berhubungan(payment system)
+2. Service test, testnya lansung kepada backendnya contohnya seperti memiliki beberapa API, yang ditest lansung salah satu API tersebut(fokus ke satu sistem/aplikasi)
+3. Unit test, melakukan test terhadap layer terkecil pada sistem/aplikasi
+
+Didalam satu aplikasi biasanya terdapat banyak layer, dan memiliki controller, service, repository(unit test hanya mengetest salah satu unit tersebut)
+*Unit Test 
+Fokus menguji bagian kode program terekcil, biasanya menguji sebuah method
+Biasanya  dibuat kecil dan  cepat, oleh karena itu biasanya kadang kode unit test lebih banyak dari kode program aslinya, karena semua skenario pengujian akan dicobas di unit test
+Unit test bisa digunaka sebagai cara untuk meningkatkan kualitas kode program kita
+
+Tips: Saat melakukan unit test coba semua skenario dari yang berhasil, sampai yang terburuk.

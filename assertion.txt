@@ -1,0 +1,15 @@
+**ASSERTION**
+Untuk menghindari penggunaan if else di unit test secara manual
+Bisa menggunakan Assertion untuk melakukan pengecekan
+Go-Lang tidak menyediakan package untuk assertion, sehingga kita butuh menambahkan library untuk melakukan assertion ini
+
+*TESTIFY*
+Salah satu library assertion yang paling populer di Go-Lang adalah TESTIFY
+Kita bisa menggunakan library ini untuk melakukan assertion terhadap result data di unit test
+https://github.com/stretchr/testify
+Kita bisa menambahkannya di Go Module dengan:
+go get github.com/stretchr/testify
+
+Ada assertion dan require
+Assertion menggunakan function Fail(Menangkap error dan melanjutkan programnya)
+Require menggunakan function FailNow (sehingga lansung berhenti mengeksekusi program)

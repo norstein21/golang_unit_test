@@ -1,0 +1,37 @@
+Selain unit test, go-lang testing package juga mendukung melakukan benchmark
+Benchmark adalah mekanisme menghitung kecepatan perfome kode aplikasi kita
+Benchmark di Go-Lang berjalan secara otomatis dengan melakukan iterasi kode yang kita panggil berkali-kali sampai waktu tertentu
+Kita tidak perlu menentukan jumlah iterasi dan lamanya, karena itu sudah diatur oleh testing.B bawaan dari testing package
+
+**testing.B**
+Struct yang digunakan untuk melakukan benchmark
+testing.B  mirip  dengan testing.T, terdapat function Fail(), FailNow(),  Error(), Fatal() dan lain-lain
+Yang  membedakan,a da beberapa attribute dan function tambahan yang digunakan untuk melakukan benchmark
+Salah satunya  adalah  attribute N, ini  digunakan untuk melakukan total iterasi sebuah benchmark
+
+**Cara Kerja Benchmark**
+Membuat  perulangan sejumlah N attribute
+Nanti  secara otomatis  GOLANG akan melakukan eksekusi sejumlah perulangan  yang ditentukan secara otomatis, lalu mendeteksi  berapa lama proses tersebut berjalan, dan disimpulkan perfoma benchmarknya dalam waktu
+
+**MENJALANKAN BENCHMARK**
+Untuk menjalankan seluruh benchmark dimodule, gunakan perintah:
+go test -v -bench=.
+
+Jika kita  ingin menjalankan benchmark tanpa unit test, kita bisa gunakan perintah:
+go test -v -run=TestTidakAda -bench=.
+
+Jika ingin menjalankan benchmark tertentu:
+go test -v -run=TestTidakAda -bench=BenchmarkTest
+
+Jika  menjalankan benchmark di root module dan ingin semua module dijalankan, kita bisa gunakan perintah
+go test -v -run=TestTidaAda -bench=./...
+
+**SUB BENCHMARK**
+Sama seperti testing.T, di testing.B jg bisa membuat sub benchmark menggunkana function Run()
+
+syntax menjalankan hanya satu sub benchmark:
+go test -v -bench=BenchmarkNama/NamaSub
+
+**TABLE BENCHMARK**
+Bisa menggunakan fungsi table seperti di unit test\
+Ini digunakan agar kita bisa mudah melakukan performance dengan kombinasi data berbeda-beda tanpa harus membuat banyak benchmark function

@@ -1,0 +1,16 @@
+**SUBTEST**
+Go-Lang mendukung fitur pembuatan function unit test di dalam function unit test
+Fitur ini memang sedikit aneh dan jarang sekali dimiliki di unit test di bahasa pemograman yang lainnya
+Untuk membuat sub test, kita bisa menggunakan function Run()
+
+Menjalankan hanya SUBTEST
+Menjalankan sebuah unit test function, kita bisa gunakan perintah:
+go test -run TestNamaFunction
+
+Atau jika ingin menjalankan hanya salah satu sub  test, kita bisa gunakan perintah:
+go test -run TestNamaFunction/NamaSubTest
+
+Atau untuk test sub test di semua function, kita bisa gunakan perintah
+go test -run /NamaSubTest (tidak perlu menulis function utamanya)
+
+

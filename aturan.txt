@@ -1,0 +1,13 @@
+**ATURAN FILE TEST**
+Go-Lang memiliki aturan cara membaut file khusus untuk unit test
+Untuk membuat file unit test, kita harus menggunakan akhiran_test
+Jadi misal kita membuat file hello_world.go, artinya untuk membuat unit testnya, kita harus  membuat file hello_world_test.go
+Yang penting menggunakan _tet diakhir
+
+
+**ATURAN FUNCTION UNIT TEST**
+Selaina turan nama file, di Go-Lang juga sudah diatur untuk nama function unit test
+Nama function untuk unit test harus diawali dengan Test
+Misal, jika ingin melakukan test pada function HelloWord, maka kita akan membuat function unit test dengan nama TestHelloWorld
+Sebenarnya tidak ada aturan nama harus sama dengan function yang ingin test selain nama function harus diawalin dengan Test, namun ini untuk mempermudahkan dalam dokumentasi function mana yang ingin ditest
+Selanjutnya harus memiliki parameter(t *testing.T) dan tidak mengembalikan return value
